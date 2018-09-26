@@ -1,0 +1,7 @@
+17:44:37 **** Clean-only build of configuration Debug for project dualPalindrome ****
+make clean 
+rm -rf  ./src/dualPalindrome.o  ./src/dualPalindrome.d  dualPalindrome
+ 
+
+17:44:37 Build Finished (took 111ms)
+

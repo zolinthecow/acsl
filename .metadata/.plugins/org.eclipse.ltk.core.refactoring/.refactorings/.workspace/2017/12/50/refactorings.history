@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;commainput&apos; to &apos;basics&apos;" description="Rename resource &apos;commainput&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/commainput" name="basics" stamp="1512971031926" updateReferences="true"/>
+</session>

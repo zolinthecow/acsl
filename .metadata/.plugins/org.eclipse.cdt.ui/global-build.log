@@ -1,0 +1,382 @@
+07:20:51 **** Clean-only build of configuration Debug for project patternFinder ****
+make clean 
+rm -rf  ./src/patternFinder.o  ./src/patternFinder.d  patternFinder
+ 
+07:22:04 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:22:04 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:22:05 **** Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+../src/patternFinder.cpp: In function ‘void fillGrid(vs)’:
+../src/patternFinder.cpp:86:26: error: invalid use of member function (did you forget the ‘()’ ?)
+  for(int i=0; i<(int)hex.size; i++){
+                          ^
+../src/patternFinder.cpp:90:26: error: call of overloaded ‘stoi(char&)’ is ambiguous
+    grid[i][j]=stoi(bin[j]);
+                          ^
+../src/patternFinder.cpp:90:26: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/stdexcept:39,
+                 from /usr/include/c++/4.8/array:38,
+                 from /usr/include/c++/4.8/tuple:39,
+                 from /usr/include/c++/4.8/bits/stl_map.h:63,
+                 from /usr/include/c++/4.8/map:61,
+                 from ../src/patternFinder.cpp:7:
+/usr/include/c++/4.8/bits/basic_string.h:2823:3: note: int std::stoi(const string&, std::size_t*, int) <near match>
+   stoi(const string& __str, size_t* __idx = 0, int __base = 10)
+   ^
+/usr/include/c++/4.8/bits/basic_string.h:2823:3: note:   no known conversion for argument 1 from ‘char’ to ‘const string& {aka const std::basic_string<char>&}’
+/usr/include/c++/4.8/bits/basic_string.h:2926:3: note: int std::stoi(const wstring&, std::size_t*, int) <near match>
+   stoi(const wstring& __str, size_t* __idx = 0, int __base = 10)
+   ^
+/usr/include/c++/4.8/bits/basic_string.h:2926:3: note:   no known conversion for argument 1 from ‘char’ to ‘const wstring& {aka const std::basic_string<wchar_t>&}’
+make: *** [src/patternFinder.o] Error 1
+07:22:05 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:22:05 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:22:12 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:22:12 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:22:12 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+../src/patternFinder.cpp: In function ‘void fillGrid(vs)’:
+../src/patternFinder.cpp:90:26: error: call of overloaded ‘stoi(char&)’ is ambiguous
+    grid[i][j]=stoi(bin[j]);
+                          ^
+../src/patternFinder.cpp:90:26: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/stdexcept:39,
+                 from /usr/include/c++/4.8/array:38,
+                 from /usr/include/c++/4.8/tuple:39,
+                 from /usr/include/c++/4.8/bits/stl_map.h:63,
+                 from /usr/include/c++/4.8/map:61,
+                 from ../src/patternFinder.cpp:7:
+/usr/include/c++/4.8/bits/basic_string.h:2823:3: note: int std::stoi(const string&, std::size_t*, int) <near match>
+   stoi(const string& __str, size_t* __idx = 0, int __base = 10)
+   ^
+/usr/include/c++/4.8/bits/basic_string.h:2823:3: note:   no known conversion for argument 1 from ‘char’ to ‘const string& {aka const std::basic_string<char>&}’
+/usr/include/c++/4.8/bits/basic_string.h:2926:3: note: int std::stoi(const wstring&, std::size_t*, int) <near match>
+   stoi(const wstring& __str, size_t* __idx = 0, int __base = 10)
+   ^
+/usr/include/c++/4.8/bits/basic_string.h:2926:3: note:   no known conversion for argument 1 from ‘char’ to ‘const wstring& {aka const std::basic_string<wchar_t>&}’
+make: *** [src/patternFinder.o] Error 1
+07:22:12 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:22:12 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:22:37 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:22:37 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:22:37 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+../src/patternFinder.cpp: In function ‘void fillGrid(vs)’:
+../src/patternFinder.cpp:99:35: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+    grid[i][j]=stringToInt((bin[j]));
+                                   ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/stdexcept:39,
+                 from /usr/include/c++/4.8/array:38,
+                 from /usr/include/c++/4.8/tuple:39,
+                 from /usr/include/c++/4.8/bits/stl_map.h:63,
+                 from /usr/include/c++/4.8/map:61,
+                 from ../src/patternFinder.cpp:7:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+make: *** [src/patternFinder.o] Error 1
+07:22:38 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:22:38 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:23:00 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:23:00 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:23:00 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+Finished building: ../src/patternFinder.cpp
+ 
+Building target: patternFinder
+Invoking: Cross G++ Linker
+g++  -o "patternFinder"  ./src/patternFinder.o   
+Finished building target: patternFinder
+ 
+07:23:01 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:23:01 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:23:10 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:23:11 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:23:11 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+Finished building: ../src/patternFinder.cpp
+ 
+Building target: patternFinder
+Invoking: Cross G++ Linker
+g++  -o "patternFinder"  ./src/patternFinder.o   
+Finished building target: patternFinder
+ 
+07:23:11 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:23:12 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:24:02 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:24:02 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:24:02 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+Finished building: ../src/patternFinder.cpp
+ 
+Building target: patternFinder
+Invoking: Cross G++ Linker
+g++  -o "patternFinder"  ./src/patternFinder.o   
+Finished building target: patternFinder
+ 
+07:24:03 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:24:03 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:24:04 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+07:45:04 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:45:04 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:45:04 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+Finished building: ../src/patternFinder.cpp
+ 
+Building target: patternFinder
+Invoking: Cross G++ Linker
+g++  -o "patternFinder"  ./src/patternFinder.o   
+Finished building target: patternFinder
+ 
+07:45:05 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:45:05 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:45:10 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+07:47:42 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+07:49:43 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+07:51:11 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+07:55:20 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+07:55:20 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:55:20 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+Finished building: ../src/patternFinder.cpp
+ 
+Building target: patternFinder
+Invoking: Cross G++ Linker
+g++  -o "patternFinder"  ./src/patternFinder.o   
+Finished building target: patternFinder
+ 
+07:55:20 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+07:55:21 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+07:55:22 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+07:59:13 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+07:59:24 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+08:00:25 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+08:02:10 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+Finished building: ../src/patternFinder.cpp
+ 
+Building target: patternFinder
+Invoking: Cross G++ Linker
+g++  -o "patternFinder"  ./src/patternFinder.o   
+Finished building target: patternFinder
+ 
+08:02:49 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+08:02:57 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+08:03:41 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+08:03:48 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+08:04:38 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+08:06:05 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+08:06:05 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+Building file: ../src/fifteenPuzzle.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/fifteenPuzzle.d" -MT"src/fifteenPuzzle.d" -o "src/fifteenPuzzle.o" "../src/fifteenPuzzle.cpp"
+Finished building: ../src/fifteenPuzzle.cpp
+ 
+Building target: fifteenPuzzle
+Invoking: Cross G++ Linker
+g++  -o "fifteenPuzzle"  ./src/fifteenPuzzle.o   
+Finished building target: fifteenPuzzle
+ 
+08:06:06 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+08:06:06 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+08:06:06 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+08:06:07 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+08:06:17 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+08:07:33 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+08:08:29 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+08:09:59 **** Incremental Build of configuration Default for project basics ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+08:09:59 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+08:09:59 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+Building file: ../src/patternFinder.cpp
+Invoking: Cross G++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/patternFinder.d" -MT"src/patternFinder.d" -o "src/patternFinder.o" "../src/patternFinder.cpp"
+Finished building: ../src/patternFinder.cpp
+ 
+Building target: patternFinder
+Invoking: Cross G++ Linker
+g++  -o "patternFinder"  ./src/patternFinder.o   
+Finished building target: patternFinder
+ 
+08:10:00 **** Incremental Build of configuration Debug for project queens ****
+make all 
+make: Nothing to be done for `all'.
+08:10:00 **** Incremental Build of configuration Debug for project sticklinks ****
+make all 
+make: Nothing to be done for `all'.
+08:10:02 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+08:10:09 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:11:24 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:11:30 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:13:27 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:17:32 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:17:33 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:18:02 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:21:40 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.
+11:25:21 **** Incremental Build of configuration Debug for project patternFinder ****
+make all 
+make: Nothing to be done for `all'.
+11:27:20 **** Incremental Build of configuration Debug for project fifteenPuzzle ****
+make all 
+make: Nothing to be done for `all'.

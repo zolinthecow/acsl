@@ -1,0 +1,87 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+#include <map>
+using namespace std;
+typedef long long ll;
+typedef pair<int, int> ii;
+typedef vector<ii> vii;
+typedef vector<int> vi;
+typedef vector<string> vs;
+
+int **truthTable;
+
+string intToString(int a){
+	string result;
+	stringstream convert;
+	convert<<a;
+	result=convert.str();
+	return result;
+}
+int stringToInt(string a){
+	int result;
+	stringstream convert(a);
+	if(!(convert>>result)){
+		result=-1;//if cannot be converted;
+	}
+	return result;
+}
+string charToString(char a){
+	stringstream ss;
+	string s;
+	ss<<a;
+	ss>>s;
+	return s;
+}
+
+int evaluateExpression(string expression, int row, int column, int variableAmount){
+	if(expression.length()==1){
+		if(expression=="@"){
+			int firstValue=truthTable[row][column-2];
+			if(firstValue==0){
+				return 1;
+			}else{
+				return 0;
+			}
+		}else{
+			int firstValue=truthTable[row][column-2], secondValue=truthTable[row][column-1];
+			bool first=firstValue;
+		}
+	}
+}
+int main() {
+	string expression;
+	getline(cin, expression);
+	int variableAmount=0;
+	for(unsigned int i=0; i<expression.length(); i++){
+		if(expression.at(i)>=65 && expression.at(i)<=90){
+			variableAmount++;
+		}
+	}
+	for(int j=0; j<pow(2, variableAmount); j++){
+		string binaryJ=bitset< 64 >( j ).to_string();
+		for(unsigned int k=0; k<binaryJ.length(); k++){
+			truthTable[j][k]=stringToInt(binaryJ.substr(k, 1));
+		}
+	}
+
+}

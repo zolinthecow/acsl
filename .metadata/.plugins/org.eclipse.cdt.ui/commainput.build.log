@@ -1,0 +1,15 @@
+21:43:16 **** Build of configuration Debug for project commainput ****
+make all 
+Building file: ../src/commainput.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/commainput.d" -MT"src/commainput.d" -o "src/commainput.o" "../src/commainput.cpp"
+Finished building: ../src/commainput.cpp
+ 
+Building target: commainput
+Invoking: Cross G++ Linker
+g++  -o "commainput"  ./src/commainput.o   
+Finished building target: commainput
+ 
+
+21:43:17 Build Finished (took 384ms)
+

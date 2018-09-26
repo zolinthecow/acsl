@@ -1,0 +1,36 @@
+16:31:31 **** Incremental Build of configuration Debug for project BigInt ****
+make all 
+Building file: ../src/main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function ‘int main()’:
+../src/main.cpp:23:15: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+   BigInt big(b);
+               ^
+In file included from /usr/include/c++/4.8/string:53:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:2:
+/usr/include/c++/4.8/bits/basic_string.tcc:212:5: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+../src/main.cpp:24:23: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+   cout<<big.multiply(c);
+                       ^
+In file included from /usr/include/c++/4.8/string:53:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:2:
+/usr/include/c++/4.8/bits/basic_string.tcc:212:5: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+make: *** [src/main.o] Error 1
+
+16:31:31 Build Finished (took 324ms)
+

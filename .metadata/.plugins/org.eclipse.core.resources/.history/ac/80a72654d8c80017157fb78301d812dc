@@ -1,0 +1,188 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+using namespace std;
+
+vector<string> permutation(vector<string> number, int size){
+	vector<string> answers;
+	for(vector<string>::iterator itr=number.begin(); itr!=number.end(); itr++){
+		string bob;
+		if(size<1){
+			continue;
+		}
+		bob.append(*itr);
+		for(vector<string>::iterator it=number.begin(); it!=number.end(); it++){
+			if(size<2){
+				continue;
+			}
+			bob.append(*it);
+			for(vector<string>::iterator its=number.begin(); its!=number.end(); its++){
+				if(size<3){
+					continue;
+				}
+				bob.append(*its);
+				for(vector<string>::iterator ite=number.begin(); ite!=number.end(); ite++){
+					if(size<4){
+						continue;
+					}
+					bob.append(*ite);
+					for(vector<string>::iterator ita=number.begin(); ita!=number.end(); ita++){
+						if(size<5){
+							continue;
+						}
+						bob.append(*ita);
+						for(vector<string>::iterator itb=number.begin(); itb!=number.end(); itb++){
+							if(size<6){
+								continue;
+							}
+							bob.append(*itb);
+							for(vector<string>::iterator itc=number.begin(); itc!=number.end(); itc++){
+								if(size<7){
+									continue;
+								}
+								bob.append(*itc);
+								for(vector<string>::iterator itd=number.begin(); itd!=number.end(); itd++){
+									if(size<8){
+										continue;
+									}
+									bob.append(*itd);
+									for(vector<string>::iterator itf=number.begin(); itf!=number.end(); itf++){
+										if(size<9){
+											continue;
+										}
+										bob.append(*itf);
+										for(vector<string>::iterator itg=number.begin(); itg!=number.end(); itg++){
+											if(size<10){
+												continue;
+											}
+											bob.append(*itg);
+											for(vector<string>::iterator ith=number.begin(); ith!=number.end(); ith++){
+												if(size<11){
+													continue;
+												}
+												bob.append(*ith);
+												for(vector<string>::iterator iti=number.begin(); iti!=number.end(); iti++){
+													if(size<12){
+														continue;
+													}
+													bob.append(*iti);
+													for(vector<string>::iterator itj=number.begin(); itj!=number.end(); itj++){
+														if(size<13){
+															continue;
+														}
+														bob.append(*itj);
+														for(vector<string>::iterator itk=number.begin(); itk!=number.end(); itk++){
+															if(size<14){
+																continue;
+															}
+															bob.append(*itk);
+															for(vector<string>::iterator itl=number.begin(); itl!=number.end(); itl++){
+																if(size<15){
+																	continue;
+																}
+																bob.append(*itl);
+																for(vector<string>::iterator itm=number.begin(); itm!=number.end(); itm++){
+																	if(size<16){
+																		continue;
+																	}
+																	bob.append(*itm);
+																	for(vector<string>::iterator itn=number.begin(); itn!=number.end(); itn++){
+																		if(size<17){
+																			continue;
+																		}
+																		bob.append(*itn);
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		bool notfound=false;
+		for(vector<string>::iterator itz=number.begin(); itz!=number.begin(); itz++){
+			size_t find=bob.find(*itz);
+			if(find!=string::npos){
+				notfound=true;
+			}
+		}
+		if(!notfound){
+			answers.push_back(bob);
+		}
+	}
+	return answers;
+}
+vector<string> separateDigits(string number){
+	int temp=number.length();
+	vector<string> answers;
+	for(int i=0; i<temp; i++){
+		string s=number.substr(i, 1);
+		answers.push_back(s);
+	}
+	return answers;
+}
+vector<int> convertToInt(vector<string> number){
+	vector<int> results;
+	for(vector<string>::iterator itr=number.begin(); itr!=number.end(); itr++){
+		int temp;
+		stringstream convert(*itr);
+		convert>>temp;
+		results.push_back(temp);
+	}
+	return results;
+}
+int findClosest(vector<int> allNums, int smallest, int largest){
+	int mean=(smallest+largest)/2;
+	int closest, count=0;;
+	for(vector<int>::iterator itr=allNums.begin(); itr!=allNums.end(); itr++){
+		if(abs((*itr)-mean)>closest&&count!=0){
+			return closest;
+		}
+		closest=abs((*itr)-mean);
+		count++;
+	}
+	return closest;
+}
+int main() {
+	string number; int k;
+	cin>>number>>k;
+	vector<string> separateNum=separateDigits(number);
+	int size=separateNum.size();
+	vector<string> permutedNum=permutation(separateNum, size );
+	vector<int> allNums=convertToInt(permutedNum);
+	sort(allNums.begin(), allNums.end());
+	for(vector<int>::iterator itr=allNums.begin(); itr!=allNums.end(); itr++){
+		cout<<*itr<<" ";
+	}
+	cout<<endl;
+	int closest=findClosest(allNums, allNums.front(), allNums.back());
+	cout<<allNums.front()<<" "<<allNums.back()<<" "<<allNums.at(49)<<" "<<allNums.at(k-1)<<closest;
+
+}

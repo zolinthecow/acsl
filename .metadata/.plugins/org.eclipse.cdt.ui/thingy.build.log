@@ -1,0 +1,15 @@
+16:18:41 **** Incremental Build of configuration Debug for project thingy ****
+make all 
+Building file: ../src/thingy.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/thingy.d" -MT"src/thingy.d" -o "src/thingy.o" "../src/thingy.cpp"
+Finished building: ../src/thingy.cpp
+ 
+Building target: thingy
+Invoking: Cross G++ Linker
+g++  -o "thingy"  ./src/thingy.o   
+Finished building target: thingy
+ 
+
+16:18:41 Build Finished (took 727ms)
+

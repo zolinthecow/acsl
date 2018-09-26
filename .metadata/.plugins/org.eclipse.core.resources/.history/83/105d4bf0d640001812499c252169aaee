@@ -1,0 +1,109 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+#include <unordered_map>
+using namespace std;
+typedef long long ll;
+typedef pair<int, int> ii;
+typedef vector<ii> vii;
+typedef vector<int> vi;
+typedef vector<string> vs;
+#define INF 1000000000;
+
+int main() {
+	for(int z=0; z<10; z++){
+		unordered_map<char, ii> chart;
+		string code, word;
+		int start;
+		vi topLabel, sideLabel;
+		string line;
+		getline(cin, line);
+		size_t found=line.find_first_of(" ");
+		code=line.substr(0, found);
+		if(code[code.length()-1]==','){
+			code.erase(code.length()-1);
+		}
+		line.erase(0, found+1);
+		found=line.find_first_of(" ");
+		word=line.substr(0, found);
+		if(word[word.length()-1]==','){
+			word.erase(word.length()-1);
+		}
+		line.erase(0, found+1);
+		start=stoi(line);
+		int count=start;
+		sideLabel.push_back(-1);
+		for(int i=0; i<(int)code.length(); i++){
+			if(code.at(i)=='#'){
+				topLabel.push_back(count);
+				sideLabel.push_back(count);
+			}else{
+				topLabel.push_back(count);
+			}
+			if(count==9){
+				count=0;
+			}else{
+				count++;
+			}
+		}
+		vector<char> used;
+		sort(sideLabel.begin(), sideLabel.end());
+		for(int i=0; i<(int)sideLabel.size(); i++){
+			for(int j=0; j<(int)topLabel.size(); j++){
+				if(sideLabel[i]==-1){
+					chart.emplace(code.at(j), ii(-1, topLabel[j]));
+					used.push_back(code.at(j));
+				}else{
+					char letter=65;
+					while(find(used.begin(), used.end(), letter)!=used.end()){
+						letter++;
+						if(letter>=90){
+							if(find(used.begin(), used.end(), '.')==used.end()){
+								letter='.';
+								break;
+							}else{
+								letter='/';
+								break;
+							}
+						}
+					}
+					chart.emplace(letter, ii(sideLabel[i], topLabel[j]));
+					used.push_back(letter);
+				}
+			}
+		}
+		vi answer;
+		for(int i=0; i<(int)word.length(); i++){
+			ii temp=chart[word.at(i)];
+			if(temp.first!=-1){
+				answer.push_back(temp.first);
+			}
+			if(temp.second!=-1){
+				answer.push_back(temp.second);
+			}
+		}
+		for(int i=0; i<(int)answer.size(); i++){
+			cout<<answer[i]<<" ";
+		}
+		cout<<endl;
+	}
+}

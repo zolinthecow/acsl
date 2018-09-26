@@ -1,0 +1,15 @@
+14:02:36 **** Build of configuration Debug for project restStops ****
+make all 
+Building file: ../src/restStops.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/restStops.d" -MT"src/restStops.d" -o "src/restStops.o" "../src/restStops.cpp"
+Finished building: ../src/restStops.cpp
+ 
+Building target: restStops
+Invoking: Cross G++ Linker
+g++  -o "restStops"  ./src/restStops.o   
+Finished building target: restStops
+ 
+
+14:02:36 Build Finished (took 314ms)
+

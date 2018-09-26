@@ -1,0 +1,39 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+#include <map>
+using namespace std;
+
+string **board;
+int main() {
+	cout<<4%3;
+	return 0;
+	int amount;
+	cin>>amount;
+	board=new string*[3];
+	for(int i=0; i<3; i++){
+		board[i]=new string[3];
+	}
+	for(int j=0; j<amount; j++){
+
+	}
+}

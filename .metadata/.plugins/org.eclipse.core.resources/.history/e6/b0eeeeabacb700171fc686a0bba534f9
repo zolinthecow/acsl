@@ -1,0 +1,54 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+#include "player.h"
+using namespace std;
+
+struct compare{
+	inline bool operator() (const Player& player1, const Player& player2){
+		string player1Name = player1.getName();
+		string player2Name = player2.getName();
+		return (player1Name.compare(player2Name)<0);
+	}
+};
+Player::Player(string a, double b, string c, double d, double e){
+	name=a;
+	bday=b;
+	city=c;
+	contractYears=d;
+	contractAmount=e;
+}
+string Player::getName(void){
+	return name;
+}
+int Player::getAge(){
+	string name = this->getName();
+	return 2017-bday;
+}
+double Player::getAnnualSalary(){
+	return contractAmount/contractYears;
+}
+vector<Player> Player::sortByName(vector<Player> players){
+	sort(players.begin(), players.end(), compare());
+	return players;
+}
+

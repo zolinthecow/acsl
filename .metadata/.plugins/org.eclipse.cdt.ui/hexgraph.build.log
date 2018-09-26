@@ -1,0 +1,6 @@
+17:40:35 **** Incremental Build of configuration Debug for project hexgraph ****
+make all 
+make: Nothing to be done for `all'.
+
+17:40:35 Build Finished (took 60ms)
+

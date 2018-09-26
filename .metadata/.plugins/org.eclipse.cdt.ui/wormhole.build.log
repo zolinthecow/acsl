@@ -1,0 +1,19 @@
+17:35:44 **** Incremental Build of configuration Debug for project wormhole ****
+make all 
+Building file: ../src/wormhole.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/wormhole.d" -MT"src/wormhole.d" -o "src/wormhole.o" "../src/wormhole.cpp"
+../src/wormhole.cpp: In function ‘bool hasLoop(std::vector<wormhole>, std::vector<wpair>, int)’:
+../src/wormhole.cpp:137:8: warning: variable ‘nomorewormhole’ set but not used [-Wunused-but-set-variable]
+   bool nomorewormhole=false;
+        ^
+Finished building: ../src/wormhole.cpp
+ 
+Building target: wormhole
+Invoking: Cross G++ Linker
+g++  -o "wormhole"  ./src/wormhole.o   
+Finished building target: wormhole
+ 
+
+17:35:45 Build Finished (took 711ms)
+

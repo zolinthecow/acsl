@@ -1,0 +1,78 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+using namespace std;
+
+vector< vector<int> > permutationfail(vector<int> numbers){
+	vector< vector<int> > permutes;
+	if(numbers.size()==1){
+		vector<int> things;
+		things.push_back(numbers.front());
+		permutes.push_back(things);
+		return permutes;
+	}else{
+		vector< vector<int> >all;
+		for(vector<int>::iterator it=numbers.begin(); it!=numbers.end(); it++){
+			int things;
+			vector< vector<int> > temp;
+			things=*it;
+			vector<int> numberscopy;
+			for(vector<int>::iterator bob=numbers.begin(); bob!=numbers.end(); bob++){
+				if(*bob!=things){
+					numberscopy.push_back(*bob);
+				}
+			}
+			temp=permutationfail(numberscopy);
+			for(vector< vector<int> >::iterator itr=temp.begin(); itr!=temp.end(); itr++){
+				(*itr).push_back(things);
+			}
+			for(vector< vector<int> >::iterator aden=temp.begin(); aden!=temp.end(); aden++){
+				all.push_back(*aden);
+			}
+		}
+		return all;
+	}
+}
+vector<int> separateDigits(string number){
+	int temp=number.length();
+	vector<int> answers;
+	for(int i=0; i<temp; i++){
+		string s=number.substr(i, 1);
+		stringstream convert(s);
+		int num;
+		convert>>num;
+		answers.push_back(num);
+	}
+	return answers;
+}
+int main() {
+	string number; int k;
+	cin>>number>>k;
+	vector<int> separateNum=separateDigits(number);
+	vector< vector<int> > numPermute=permutationfail(separateNum);
+	for(vector< vector<int> >::iterator itr=numPermute.begin(); itr!=numPermute.end(); itr++){
+		for(vector<int>::iterator it=(*itr).begin(); it!=(*itr).end(); it++){
+			cout<<*it<<" ";
+		}
+		cout<<endl;
+	}
+}

@@ -1,0 +1,136 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+using namespace std;
+
+
+vector<string> separateDigits(string number){
+	int temp=number.length();
+	vector<string> answers;
+	for(int i=0; i<temp; i++){
+		string s=number.substr(i, 1);
+		answers.push_back(s);
+	}
+	return answers;
+}
+vector<int> convertToInt(vector<string> number){
+	vector<int> results;
+	for(vector<string>::iterator itr=number.begin(); itr!=number.end(); itr++){
+		int temp;
+		stringstream convert(*itr);
+		convert>>temp;
+		results.push_back(temp);
+	}
+	return results;
+}
+
+long long findSmallest(vector<int> allNums){
+	sort(allNums.begin(), allNums.end());
+	string num;
+	for(vector<int>::iterator itr=allNums.begin(); itr!=allNums.end(); itr++){
+		stringstream ss;
+		ss<<*itr;
+		string temp=ss.str();
+		num.append(temp);
+	}
+	long long result;
+	stringstream covt(num);
+	covt>>result;
+	return result;
+}
+bool largestSort(int i, int j){
+	return (i>j);
+}
+long long findLargest(vector<int> allNums){
+	sort(allNums.begin(), allNums.end(), largestSort);
+	string num;
+	for(vector<int>::iterator itr=allNums.begin(); itr!=allNums.end(); itr++){
+		stringstream ss;
+		ss<<*itr;
+		string temp=ss.str();
+		num.append(temp);
+	}
+	long long result;
+	stringstream covt(num);
+	covt>>result;
+	return result;
+}
+string convertToString(int num){
+
+}
+int convertToInt(string num){
+	stringstream convert(num);
+	int result;
+	convert>>result;
+	return result;
+}
+int* findNextNum(int num[], int size){
+	bool foundNext=false;
+	string lastNums;
+	int changedAt;
+	for(int i=size-1; i>0; i--){
+		if(num[i]>num[i-1]){
+			foundNext=true;
+			int saved=num[i];
+			changedAt=i;
+			num[i]=num[i-1];
+			num[i-1]=saved;
+			for(int j=i+1; j<size; j++){
+				stringstream ss;
+				ss<<num[j];
+				string temp=ss.str();
+				lastNums.append(temp);
+			}
+			break;
+		}
+	}
+	vector<string> numb;
+	int lastNumSize=lastNums.size();
+	for(int k=0; k<lastNumSize; k++){
+		string z=lastNums.at(k);
+		numb.push_back(z);
+	}
+	vector<int> numbe=convertToInt(numb);
+	long long small=findSmallest(numbe);
+	string res;
+	stringstream convert;
+	convert<<small;
+	res=convert.str();
+	int count=0;
+	for(int l=changedAt; l<size; l++){
+		string guy=res.at(l);
+		stringstream dude(guy);
+		int thing;
+		dude>>thing;
+		num[l]=thing;
+	}
+	return num;
+}
+int main() {
+	string number; int k;
+	cin>>number>>k;
+	vector<string> separateNum=separateDigits(number);
+	vector<int> num=convertToInt(separateNum);
+	long long smallest=findSmallest(num);
+	long long largest=findLargest(num);
+	cout<<smallest<<" "<<largest;
+}

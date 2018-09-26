@@ -1,0 +1,13 @@
+16:31:31 **** Incremental Build of configuration Debug for project binpacking ****
+make all 
+Building file: ../src/binpacking.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"src/binpacking.d" -MT"src/binpacking.d" -o "src/binpacking.o" "../src/binpacking.cpp"
+../src/binpacking.cpp: In function ‘int main()’:
+../src/binpacking.cpp:95:15: error: ‘test’ was not declared in this scope
+  for(auto it: test){
+               ^
+make: *** [src/binpacking.o] Error 1
+
+16:31:32 Build Finished (took 461ms)
+

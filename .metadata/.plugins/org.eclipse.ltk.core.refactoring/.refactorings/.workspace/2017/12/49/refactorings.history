@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;dualPalindrome&apos;" deleteContents="false" description="Delete resource &apos;dualPalindrome&apos;" element1="/dualPalindrome" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1512351884791"/>
+</session>

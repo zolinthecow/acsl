@@ -1,0 +1,17 @@
+-- VERSION_5
+-- START DISKCACHE_2
+/home/colin/src/acsl/.metadata/.plugins/org.eclipse.core.resources/.projects/pythonthing/com.python.pydev.analysis/v2_indexcache
+pythonthing|1536524946000000000|/home/colin/src/acsl/pythonthing/pythonthing.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=/home/colin/src/acsl/pythonthing/pythonthing.py
+2=pythonthing
+-- END DICTIONARY
+-- START TREE 1
+1
+thi|1|thing!1^1#1*19@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

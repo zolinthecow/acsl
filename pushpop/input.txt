@@ -1,0 +1,11 @@
+5 3 7 6 1 9 8 7 0
+S P E
+S P(4) E
+Q P E
+Q P(4) E
+S H(3) E
+Q L(8) E
+S H L E
+Q M(2) E
+S P H E
+Q P M(1) E

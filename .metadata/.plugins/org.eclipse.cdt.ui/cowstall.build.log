@@ -1,0 +1,22 @@
+16:20:48 **** Build of configuration Debug for project cowstall ****
+make all 
+Building file: ../src/cowstall.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cowstall.d" -MT"src/cowstall.d" -o "src/cowstall.o" "../src/cowstall.cpp"
+../src/cowstall.cpp: In function ‘int main()’:
+../src/cowstall.cpp:65:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if(i>=gaps.size()){
+                   ^
+../src/cowstall.cpp:73:7: warning: unused variable ‘position’ [-Wunused-variable]
+   int position;
+       ^
+Finished building: ../src/cowstall.cpp
+ 
+Building target: cowstall
+Invoking: Cross G++ Linker
+g++  -o "cowstall"  ./src/cowstall.o   
+Finished building target: cowstall
+ 
+
+16:20:49 Build Finished (took 610ms)
+
